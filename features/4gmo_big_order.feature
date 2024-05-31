@@ -1,3 +1,4 @@
+ Feature: GMO Online Catalog Item Details
  As a user
   I want to place an order with multiple items
   So that I can verify the total price and details of my order
