@@ -5,7 +5,8 @@ Feature: GMO Online Catalog
 
   Background:
     Given I am on the GMO homepage
-
+    
+  @maximize
   Scenario: Visiting the GMO Online Catalog
     When I click on "Enter GMO Online"
     Then I should see the GMO Online Catalog page
