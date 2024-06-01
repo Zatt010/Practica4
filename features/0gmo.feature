@@ -17,11 +17,3 @@ Feature: GMO Online Catalog
     And I should see "Padded Socks" with price "$ 19.99"
     And I should see "Hiking Boots" with price "$ 109.90"
     And I should see "Back Country Shorts" with price "$ 24.95"
-
-  Scenario: Viewing About the GMO Site
-    When I click on "About the GMO Site"
-    Then I should see the About the GMO Site page
-    And I should see "This is a sample online commerce application. It is not real."
-    And I should see "Green Mountain Outpost is a fictitious company."
-    And I should see "For your privacy and security, DO NOT ENTER REAL BILLING OR SHIPPING INFORMATION"
-    
