@@ -25,7 +25,8 @@
       | 5   | Padded Socks              | To Be Shipped   | $ 19.99    | $ 99.95     |
       | 5   | Hiking Boots              | To Be Shipped   | $ 109.90   | $ 549.50    |
       | 5   | Back Country Shorts       | To Be Shipped   | $ 24.95    | $ 124.75    |
-      |     | Product Total             |                 |            | $ 3513.85   |
-      |     | Sales Tax                 |                 |            | $ 175.69    |
-      |     | Shipping & Handling       |                 |            | $ 5.00      |
-      |     | Grand Total               |                 |            | $ 3694.54   |
+    And I should see the following information:
+      | Product Total             | $ 3513.85   |
+      | Sales Tax                 | $ 175.69    |
+      | Shipping & Handling       | $ 5.00      |
+      | Grand Total               | $ 3694.54   |
