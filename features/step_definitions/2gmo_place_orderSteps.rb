@@ -7,16 +7,13 @@ When(/^2I click on "Enter GMO Online"$/) do
 end
 
 When(/^2I add 1 "([^"]*)" to the order$/) do |item_name|
-  # Encuentra el nombre del producto
   product_name_css = "body > form > table > tbody > tr:nth-child(2) > td > div > center > table > tbody > tr > td:nth-child(2) > a > strong"
 
-  # Encuentra todos los nombres de productos
   product_names = all(product_name_css).map(&:text)
 
-  # Encuentra el índice del producto actual
   index = product_names.index(item_name)
 
-  # Calcula el selector específico del producto actual
+  # Select específico del producto actual
   specific_unit_price_input_css = "body > form > table > tbody > tr:nth-child(2) > td > div > center > table > tbody > tr:nth-child(#{index + 2}) > td:nth-child(3)"
   specific_quantity_input_css = "body > form > table > tbody > tr:nth-child(2) > td > div > center > table > tbody > tr:nth-child(#{index + 2}) > td:nth-child(4) > h1 > input[type=text]"
 
