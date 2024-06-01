@@ -4,8 +4,8 @@ Feature: Resetting Order Quantity
   So that I can clear the form easily
 
   Background:
-    Given I am on the GMO homepage
-    When I click on "Enter GMO Online"
+    Given 6I am on the GMO homepage
+    When 6I click on "Enter GMO Online"
 
   @maximize
   Scenario: Resetting Order Quantity to Zero
