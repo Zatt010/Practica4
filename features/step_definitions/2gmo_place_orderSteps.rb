@@ -21,7 +21,6 @@ When(/^2I add 1 "([^"]*)" to the order$/) do |item_name|
   find(specific_unit_price_input_css).sibling('td:nth-child(4)').find('h1 > input[type=text]').set('1')
 end
 
-
 Then(/^2I press "Place An Order"$/) do
   click_button 'Place An Order'
 end
@@ -31,12 +30,33 @@ Then(/^2I should see the Place Order page$/) do
 end
 
 Then(/^2I should see the following order details:$/) do |table|
+  order_details = page.find('body > form > table > tbody > tr:nth-child(1) > td > div > center > table > tbody > tr:nth-child(2)')
+
   table.rows.each do |row|
-    qty, description, status, unit_price, total_price = row
-    expect(page).to have_content(qty) unless qty.nil? || qty.empty?
-    expect(page).to have_content(description)
-    expect(page).to have_content(status) unless status.nil? || status.empty?
-    expect(page).to have_content(unit_price) unless unit_price.nil? || unit_price.empty?
-    expect(page).to have_content(total_price)
+    qty = row[0]
+    product_description = row[1]
+    delivery_status = row[2]
+    unit_price = row[3]
+    total_price = row[4]
+
+    expect(order_details.find('td:nth-child(1)').text).to eq(qty)
+    expect(order_details.find('td:nth-child(2)').text).to eq(product_description)
+    expect(order_details.find('td:nth-child(3)').text).to eq(delivery_status)
+    expect(order_details.find('td:nth-child(4)').text).to eq(unit_price)
+    expect(order_details.find('td:nth-child(5)').text).to eq(total_price)
   end
 end
+
+Then(/^2I should see the following information:$/) do |table|
+  additional_info = page.find('body > form > table > tbody > tr:nth-child(1) > td > div > center > table > tbody > tr:nth-child(3)')
+
+  table.rows.each do |row|
+    info_label = row[0]
+    info_value = row[1]
+
+    expect(additional_info).to have_content(info_label)
+    expect(additional_info.find('td:nth-child(3)').text).to eq(info_value)
+  end
+end
+
+

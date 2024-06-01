@@ -15,7 +15,8 @@ Feature: Placing an Order with a Single Item
     And 2I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | 3 Person Dome Tent        | To Be Shipped   | $ 299.99   | $ 299.99    |
-      |     | Product Total             |                 |            | $ 299.99    |
+      And 2I should see the following information:
+      | Product Total | $ 299.99    |
 
   @maximize
   Scenario: Placing an Order with 1 External Frame Backpack
@@ -25,7 +26,8 @@ Feature: Placing an Order with a Single Item
     And 2I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | External Frame Backpack   | To Be Shipped   | $ 179.95   | $ 179.95    |
-      |     | Product Total             |                 |            | $ 179.95    |
+      And 2I should see the following information:
+      | Product Total | $ 179.95    |
 
   @maximize
   Scenario: Placing an Order with 1 Glacier Sun Glasses
@@ -35,7 +37,8 @@ Feature: Placing an Order with a Single Item
     And 2I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | Glacier Sun Glasses       | To Be Shipped   | $ 67.99    | $ 67.99     |
-      |     | Product Total             |                 |            | $ 67.99     |
+      And 2I should see the following information:
+      | Product Total | $ 67.99     |
 
   @maximize
   Scenario: Placing an Order with 1 Padded Socks
@@ -45,7 +48,8 @@ Feature: Placing an Order with a Single Item
     And 2I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | Padded Socks              | To Be Shipped   | $ 19.99    | $ 19.99     |
-      |     | Product Total             |                 |            | $ 19.99     |
+      And 2I should see the following information:
+      | Product Total | $ 19.99     |
 
   @maximize
   Scenario: Placing an Order with 1 Hiking Boots
@@ -55,7 +59,8 @@ Feature: Placing an Order with a Single Item
     And 2I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | Hiking Boots              | To Be Shipped   | $ 109.90   | $ 109.90    |
-      |     | Product Total             |                 |            | $ 109.90    |
+      And 2I should see the following information:
+      | Product Total | $ 109.90    |
 
   @maximize
   Scenario: Placing an Order with 1 Back Country Shorts
@@ -65,4 +70,5 @@ Feature: Placing an Order with a Single Item
     And 2I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | Back Country Shorts       | To Be Shipped   | $ 24.95    | $ 24.95     |
-      |     | Product Total             |                 |            | $ 24.95     |
+      And 2I should see the following information:
+      | Product Total | $ 24.95     |

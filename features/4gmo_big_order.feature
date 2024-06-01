@@ -4,8 +4,8 @@
   So that I can verify the total price and details of my order
 
   Background:
-    Given I am on the GMO homepage
-    When I click on "Enter GMO Online"
+    Given 4I am on the GMO homepage
+    When 4I click on "Enter GMO Online"
 
   @maximize
   Scenario: Placing an Order with Multiple Items
