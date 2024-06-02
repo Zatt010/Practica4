@@ -13,11 +13,12 @@ Feature: Placing an Order with Multiple Items
     And I add 1 "External Frame Backpack" to the order
     And I press "Place An Order"
     Then I should see the Place Order page
-    And the following order details should be displayed:
+    And I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | 3 Person Dome Tent        | To Be Shipped   | $ 299.99   | $ 299.99    |
       | 1   | External Frame Backpack   | To Be Shipped   | $ 179.95   | $ 179.95    |
-      |     | Product Total             |                 |            | $ 479.94    |
+      And I should see that the Product Total information is the sum beetween de Total Prices:
+      | Product Total | $ 479.94    |
 
   @maximize
   Scenario: Adding 3 Person Dome Tent and Glacier Sun Glasses
@@ -25,11 +26,12 @@ Feature: Placing an Order with Multiple Items
     And I add 1 "Glacier Sun Glasses" to the order
     And I press "Place An Order"
     Then I should see the Place Order page
-    And the following order details should be displayed:
+    And I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | 3 Person Dome Tent        | To Be Shipped   | $ 299.99   | $ 299.99    |
       | 1   | Glacier Sun Glasses       | To Be Shipped   | $ 67.99    | $ 67.99     |
-      |     | Product Total             |                 |            | $ 367.98    |
+    And I should see that the Product Total information is the sum beetween de Total Prices:
+      | Product Total | $ 367.98    |
 
   @maximize
   Scenario: Adding 3 Person Dome Tent and Padded Socks
@@ -37,11 +39,12 @@ Feature: Placing an Order with Multiple Items
     And I add 1 "Padded Socks" to the order
     And I press "Place An Order"
     Then I should see the Place Order page
-    And the following order details should be displayed:
+    And I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | 3 Person Dome Tent        | To Be Shipped   | $ 299.99   | $ 299.99    |
       | 1   | Padded Socks              | To Be Shipped   | $ 19.99    | $ 19.99     |
-      |     | Product Total             |                 |            | $ 319.98    |
+    And I should see that the Product Total information is the sum beetween de Total Prices:
+      | Product Total | $ 319.98    |
 
   @maximize
   Scenario: Adding 3 Person Dome Tent and Hiking Boots
@@ -49,11 +52,12 @@ Feature: Placing an Order with Multiple Items
     And I add 1 "Hiking Boots" to the order
     And I press "Place An Order"
     Then I should see the Place Order page
-    And the following order details should be displayed:
+    And I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | 3 Person Dome Tent        | To Be Shipped   | $ 299.99   | $ 299.99    |
       | 1   | Hiking Boots              | To Be Shipped   | $ 109.90   | $ 109.90    |
-      |     | Product Total             |                 |            | $ 409.89    |
+    And I should see that the Product Total information is the sum beetween de Total Prices:
+      | Product Total | $ 409.89    |
 
   @maximize
   Scenario: Adding 3 Person Dome Tent and Back Country Shorts
@@ -61,8 +65,9 @@ Feature: Placing an Order with Multiple Items
     And I add 1 "Back Country Shorts" to the order
     And I press "Place An Order"
     Then I should see the Place Order page
-    And the following order details should be displayed:
+    And I should see the following order details:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | 3 Person Dome Tent        | To Be Shipped   | $ 299.99   | $ 299.99    |
       | 1   | Back Country Shorts       | To Be Shipped   | $ 24.95    | $ 24.95     |
-      |     | Product Total             |                 |            | $ 324.94    |
+    And I should see that the Product Total information is the sum beetween de Total Prices:
+      | Product Total | $ 324.94    |

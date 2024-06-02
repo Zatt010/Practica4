@@ -4,16 +4,19 @@ Feature: GMO Online Catalog
   So that I can see product descriptions, photos, and order products
 
   Background:
-    Given 0I am on the GMO homepage
+    Given I am on the GMO homepage
     
   @maximize
   Scenario: Visiting the GMO Online Catalog from 0gmo
-    When 0I click on "Enter GMO Online"
-    Then 0I should see the GMO Online Catalog page
-    And 0I should see "These are the items currently available through our online catalog"
-    And 0I should see "3 Person Dome Tent" with price "$ 299.99"
-    And 0I should see "External Frame Backpack" with price "$ 179.95"
-    And 0I should see "Glacier Sun Glasses" with price "$ 67.99"
-    And 0I should see "Padded Socks" with price "$ 19.99"
-    And 0I should see "Hiking Boots" with price "$ 109.90"
-    And 0I should see "Back Country Shorts" with price "$ 24.95"
+    When I click on "Enter GMO Online"
+    Then I should see the GMO Online Catalog page
+    And I should see "These are the items currently available through our online catalog"
+    And I should see "<Item>" with price "<Price>"
+    Examples:
+      | Item                    | Price    |
+      | 3 Person Dome Tent      | $ 299.99 |
+      | External Frame Backpack | $ 179.95 |
+      | Glacier Sun Glasses     | $ 67.99  |
+      | Padded Socks            | $ 19.99  |
+      | Hiking Boots            | $ 109.90 |
+      | Back Country Shorts     | $ 24.95  |

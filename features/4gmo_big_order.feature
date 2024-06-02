@@ -4,8 +4,8 @@
   So that I can verify the total price and details of my order
 
   Background:
-    Given 4I am on the GMO homepage
-    When 4I click on "Enter GMO Online"
+    Given I am on the GMO homepage
+    When I click on "Enter GMO Online"
 
   @maximize
   Scenario: Placing an Order with Multiple Items
@@ -25,7 +25,7 @@
       | 5   | Padded Socks              | To Be Shipped   | $ 19.99    | $ 99.95     |
       | 5   | Hiking Boots              | To Be Shipped   | $ 109.90   | $ 549.50    |
       | 5   | Back Country Shorts       | To Be Shipped   | $ 24.95    | $ 124.75    |
-    And I should see the following information:
+    And I should see the information bellow totally completed:
       | Product Total             | $ 3513.85   |
       | Sales Tax                 | $ 175.69    |
       | Shipping & Handling       | $ 5.00      |
