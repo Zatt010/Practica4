@@ -25,10 +25,21 @@ Feature: Fill the billing information form
         Then I should move to "Online store receipt"
 
         Examples:
-        | Name       | Address        | City     | State | Zip    | Phone       | E-mail           | Credit Card    | Card Number   | Expiration |
-        | John Doe   | 123 Elm St     | Anytown  | NY    | 12345  | 555-1234    | john@example.com | Visa           | 4111111111111 | 12/25      |
-        | Jane Smith | 456 Oak Ave    | Othertown| CA    | 67890  | 555-5678    | jane@example.com | MasterCard     | 5500000000000 | 11/26      |
-        | Bob Brown  | 789 Pine Rd    | Sometown | TX    | 11223  | 555-9876    | bob@example.com  | American Express | 3400000000000 | 10/27      |
+        | Name          | Address         | City      | State | Zip   | Phone      | E-mail               | Credit Card       | Card Number     | Expiration |
+        | John Doe      | 123 Elm St      | Anytown   | NY    | 12345 | 555-1234   | john@example.com     | Visa              | 4111111111111111 | 12/95      |
+        | Jane Smith    | 456 Oak Ave     | Othertown | CA    | 67890 | 555-5678   | jane@example.com     | MasterCard        | 5500000000000000 | 11/96      |
+        | Bob Brown     | 789 Pine Rd     | Sometown  | TX    | 11223 | 555-9876   | bob@example.com      | American Express  | 340000000000000  | 10/97      |
+        | Alice Green   | 321 Birch Blvd  | Newcity   | FL    | 54321 | 555-4321   | alice@example.com    | Visa              | 4111222233334444 | 01/98      |
+        | Charlie White | 654 Cedar Lane  | Oldtown   | IL    | 98765 | 555-6789   | charlie@example.com  | MasterCard        | 5500111122223333 | 09/95      |
+        | Dave Black    | 987 Spruce Ave  | Midville  | OH    | 33445 | 555-1235   | dave@example.com     | American Express  | 370011122233300  | 03/99      |
+        | Eve Blue      | 135 Willow St   | Smalltown | NJ    | 55678 | 555-2345   | eve@example.com      | Visa              | 4111555566667777 | 07/94      |
+        | Frank Yellow  | 246 Aspen Dr    | Bigcity   | MI    | 66789 | 555-3456   | frank@example.com    | MasterCard        | 5500444455556666 | 05/99      |
+        | Grace Purple  | 357 Maple Cir   | Uptown    | PA    | 77890 | 555-4567   | grace@example.com    | American Express  | 370022233344400  | 08/98      |
+        | Hank Orange   | 468 Oakwood Ct  | Downtown  | VA    | 88901 | 555-5679   | hank@example.com     | Visa              | 4111888899990000 | 04/99      |
+        | Ivy Violet    | 579 Beech Rd    | Nearville | WA    | 99012 | 555-6780   | ivy@example.com      | MasterCard        | 5500666677778888 | 06/96      |
+        | Jack Red      | 680 Cherry Ln   | Farville  | OR    | 10123 | 555-7891   | jack@example.com     | American Express  | 370033344455500  | 02/95      |
+        | Kate Brown    | 791 Poplar Pl   | Middletown| CO    | 11234 | 555-8902   | kate@example.com     | Visa              | 4111999900001111 | 11/97      |
+
 
     Scenario Outline: Filling billing information with an empty field
         When I input <Name> in the "name field"
