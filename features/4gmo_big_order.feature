@@ -9,12 +9,14 @@
 
   @maximize
   Scenario: Placing an Order with Multiple Items
-    When I add 5 "3 Person Dome Tent" to the order
-    And I add 5 "External Frame Backpack" to the order
-    And I add 5 "Glacier Sun Glasses" to the order
-    And I add 5 "Padded Socks" to the order
-    And I add 5 "Hiking Boots" to the order
-    And I add 5 "Back Country Shorts" to the order
+    When I add the following items to the order:
+      | Quantity | Item                   |
+      | 5        | 3 Person Dome Tent     |
+      | 5        | External Frame Backpack|
+      | 5        | Glacier Sun Glasses    |
+      | 5        | Padded Socks           |
+      | 5        | Hiking Boots           |
+      | 5        | Back Country Shorts    |
     And I press "Place An Order"
     Then I should see the Place Order page
     And I should see the following order details:

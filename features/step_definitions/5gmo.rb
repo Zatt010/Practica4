@@ -1,8 +1,5 @@
 Then(/^I should see that the Product Total information is the sum beetween de Total Prices:$/) do |table|
-     # Encontrar el elemento específico que contiene "Product Total"
   product_total_element = page.find('td', text: /Product Total/i, match: :first)
-  
-  # Encontrar todos los elementos que contienen los precios totales
   total_price_elements = page.all('td', text: /\$ \d+\.\d+/)
 
   # Extraer los valores de texto y convertirlos a números
