@@ -19,12 +19,20 @@ Given(/^I am on the GMO homepage$/) do
     click_button 'Place An Order'
   end
 
+  Then(/^I press "Place The Order"$/) do
+    click_button 'Place The Order'
+  end
+
   Then(/^I should see the Place Order page$/) do
     expect(page).to have_content('Place Order')
   end
 
   Then(/^I press "Proceed with order"$/) do
     click_button 'Proceed With Order'
+  end
+
+  Then(/^I press "Same As Bill" checkbox$/) do
+    find('input[type=checkbox][name="shipSameAsBill"]').set(true)
   end
   
   Then(/^I should see the following order details:$/) do |table|

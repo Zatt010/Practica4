@@ -10,11 +10,6 @@
     end
   end
   
-  Then(/^I press "Same As Bill" checkbox$/) do
-    find('input[type=checkbox][name="shipSameAsBill"]').set(true)
-  end
-  
-  
   Then(/^I should see the following shipping details filled:$/) do |table|
     shipping_details = table.rows_hash
     shipping_details.each do |field, value|
