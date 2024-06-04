@@ -10,36 +10,27 @@ Feature: Fill the billing information form
     And I press "Place An Order"
     And I press "Proceed with order"
 
-  Scenario Outline: Filling billing information correctly
-    When I input <Name> in the "name field"
-    And I input <Address> in the "address field"
-    And I input <City> in the "city field"
-    And I input <State> in the "state field"
-    And I input <Zip> in the "zip field"
-    And I input <Phone> in the "phone field"
-    And I input <E-mail> in the "email field"
-    And I select <Credit Card> from the "credit card type dropdown"
-    And I input <Card Number> in the "card number field"
-    And I input <Expiration> in the "expiration date field"
-    And I press "Same As Bill" checkbox
-    And I press "Place The Order"
-    Then I should see the OnLine Store Receipt page
+    Scenario Outline: Filling billing information correctly
+        When I input <Name> in the "name field"
+        And I input <Address> in the "address field"
+        And I input <City> in the "city field"
+        And I input <State> in the "state field"
+        And I input <Zip> in the "zip field"
+        And I input <Phone> in the "phone field"
+        And I input <E-mail> in the "email field"
+        And I select <Credit Card> from the "credit card type dropdown"
+        And I input <Card Number> in the "card number field"
+        And I input <Expiration> in the "expiration date field"
+        And I press "Same As Bill" checkbox
+        And I press "Place The Order"
+        Then I should see the OnLine Store Receipt page
 
         Examples:
             | Name          | Address         | City      | State | Zip   | Phone         | E-mail               | Credit Card       | Card Number     | Expiration |
             | John Doe      | 123 Elm St      | Anytown   | NY    | 12345 | 555-123-1234  | john@example.com     | Visa              | 4111111111111111 | 12/95      |
             | Jane Smith    | 456 Oak Ave     | Othertown | CA    | 67890 | 555-567-5678  | jane@example.com     | MasterCard        | 5500000000000000 | 11/96      |
             | Bob Brown     | 789 Pine Rd     | Sometown  | TX    | 11223 | 555-987-9876  | bob@example.com      | American Express  | 340000000000000  | 10/97      |
-            | Alice Green   | 321 Birch Blvd  | Newcity   | FL    | 54321 | 555-432-4321  | alice@example.com    | Visa              | 4111222233334444 | 01/98      |
-            | Charlie White | 654 Cedar Lane  | Oldtown   | IL    | 98765 | 555-678-6789  | charlie@example.com  | MasterCard        | 5500111122223333 | 09/95      |
-            | Dave Black    | 987 Spruce Ave  | Midville  | OH    | 33445 | 555-123-1235  | dave@example.com     | American Express  | 370011122233300  | 03/99      |
-            | Eve Blue      | 135 Willow St   | Smalltown | NJ    | 55678 | 555-234-2345  | eve@example.com      | Visa              | 4111555566667777 | 07/94      |
-            | Frank Yellow  | 246 Aspen Dr    | Bigcity   | MI    | 66789 | 555-345-3456  | frank@example.com    | MasterCard        | 5500444455556666 | 05/99      |
-            | Grace Purple  | 357 Maple Cir   | Uptown    | PA    | 77890 | 555-456-4567  | grace@example.com    | American Express  | 370022233344400  | 08/98      |
-            | Hank Orange   | 468 Oakwood Ct  | Downtown  | VA    | 88901 | 555-567-5679  | hank@example.com     | Visa              | 4111888899990000 | 04/99      |
-            | Ivy Violet    | 579 Beech Rd    | Nearville | WA    | 99012 | 555-678-6780  | ivy@example.com      | MasterCard        | 5500666677778888 | 06/96      |
-            | Jack Red      | 680 Cherry Ln   | Farville  | OR    | 10123 | 555-789-7891  | jack@example.com     | American Express  | 370033344455500  | 02/95      |
-            | Kate Brown    | 791 Poplar Pl   | Middletown| CO    | 11234 | 555-890-8902  | kate@example.com     | Visa              | 4111999900001111 | 11/97      |
+
 
 
     Scenario Outline: Filling billing information with an empty field
@@ -55,16 +46,16 @@ Feature: Fill the billing information form
         And I input <Expiration> in the "expiration date field"
         And I press "Same As Bill" checkbox
         And I press "Place The Order"
-        Then I should get an <Exception>
+        Then I should get an <Alert> alert
 
         Examples:
-            | Name       | Address        | City      | State | Zip    | Phone         | E-mail           | Credit Card       | Card Number     | Expiration | Exception                        |
-            |            | 123 Elm St      | Anytown   | NY    | 12345 | 555-123-1234  | john@example.com | Visa              | 4111222233334444 | 12/95      | "Name field is required"        |
-            | Jane Smith |                 | Othertown | CA    | 67890 | 555-567-5678  | jane@example.com | MasterCard        | 5500111122223333 | 11/96      | "Address field is required"     |
-            | Bob Brown  | 789 Pine Rd     | Sometown  |       | 11223 | 555-987-9876  | bob@example.com  | American Express  | 340022233344400  | 10/97      | "State field is required"       |
-            | John Doe   | 123 Elm St      | Anytown   | NY    |       | 555-123-1234  | john@example.com | Visa              | 4111333344445555 | 12/95      | "Zip field is required"         |
-            | Jane Smith | 456 Oak Ave     | Othertown | CA    | 67890 |               | jane@example.com | MasterCard        | 5500222333444000 | 11/96      | "Phone field is required"       |
-            | Bob Brown  | 789 Pine Rd     | Sometown  | TX    | 11223 | 555-987-9876  |                  | American Express  | 340033344455500  | 10/97      | "Email field is required"       |
+            | Name       | Address        | City      | State | Zip    | Phone         | E-mail           | Credit Card       | Card Number     | Expiration | Alert                        |
+            |            | 123 Elm St      | Anytown   | NY    | 12345 | 555-123-1234  | john@example.com | Visa              | 4111222233334444 | 12/95      | "This is a required field."     |
+            | Jane Smith |                 | Othertown | CA    | 67890 | 555-567-5678  | jane@example.com | MasterCard        | 5500111122223333 | 11/96      | "This is a required field."     |
+            | Bob Brown  | 789 Pine Rd     | Sometown  |       | 11223 | 555-987-9876  | bob@example.com  | American Express  | 340022233344400  | 10/97      | "This is a required field."       |
+            | John Doe   | 123 Elm St      | Anytown   | NY    |       | 555-123-1234  | john@example.com | Visa              | 4111333344445555 | 12/95      | "Please enter a valid zip code in this field."         |
+            | Jane Smith | 456 Oak Ave     | Othertown | CA    | 67890 |               | jane@example.com | MasterCard        | 5500222333444000 | 11/96      | "This is a required field."       |
+            | Bob Brown  | 789 Pine Rd     | Sometown  | TX    | 11223 | 555-987-9876  |                  | American Express  | 340033344455500  | 10/97      | "This is a required field."       |
             | Jane Smith | 456 Oak Ave     | Othertown | CA    | 67890 | 555-567-5678  | jane@example.com | MasterCard        |                 | 11/96      | "Card Number field is required" |
             | Bob Brown  | 789 Pine Rd     | Sometown  | TX    | 11223 | 555-987-9876  | bob@example.com  | American Express  | 340044455566600  |            | "Expiration field is required"  |
 

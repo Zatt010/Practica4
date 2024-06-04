@@ -42,9 +42,8 @@ Then(/^I should see the OnLine Store Receipt page$/) do
   expect(page).to have_content('OnLine Store Receipt')
 end
 
-Then(/^I should get an "(.*)" alert$/) do |expected_alert_text|
+Then(/^I should get an "(.*)" alert$/) do |alert|
   alert_text = page.driver.browser.switch_to.alert.text
-  expect(alert_text).to eq(expected_alert_text)
-  page.driver.browser.switch_to.alert.accept # Accept the alert
+  expect(alert_text).to eq(alert)
 end
 
