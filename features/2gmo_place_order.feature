@@ -15,7 +15,7 @@ Feature: Placing an Order with a Single Item
     And I should see the following order details for the only item:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | 3 Person Dome Tent        | To Be Shipped   | $ 299.99   | $ 299.99    |
-      And I should see the following information:
+    And I should see the Product Total information bellow:
       | Product Total | $ 299.99    |
 
   @maximize
@@ -26,7 +26,7 @@ Feature: Placing an Order with a Single Item
     And I should see the following order details for the only item:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | External Frame Backpack   | To Be Shipped   | $ 179.95   | $ 179.95    |
-      And I should see the following information:
+    And I should see the Product Total information bellow:
       | Product Total | $ 179.95    |
 
   @maximize
@@ -37,7 +37,7 @@ Feature: Placing an Order with a Single Item
     And I should see the following order details for the only item:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | Glacier Sun Glasses       | To Be Shipped   | $ 67.99    | $ 67.99     |
-      And 2I should see the following information:
+    And I should see the Product Total information bellow:
       | Product Total | $ 67.99     |
 
   @maximize
@@ -48,7 +48,7 @@ Feature: Placing an Order with a Single Item
     And I should see the following order details for the only item:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | Padded Socks              | To Be Shipped   | $ 19.99    | $ 19.99     |
-      And 2I should see the following information:
+    And I should see the Product Total information bellow:
       | Product Total | $ 19.99     |
 
   @maximize
@@ -70,5 +70,5 @@ Feature: Placing an Order with a Single Item
     And I should see the following order details for the only item:
       | Qty | Product Description       | Delivery Status | Unit Price | Total Price |
       | 1   | Back Country Shorts       | To Be Shipped   | $ 24.95    | $ 24.95     |
-      And I should see the following information:
+    And I should see the Product Total information bellow:
       | Product Total | $ 24.95     |
