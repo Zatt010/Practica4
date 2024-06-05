@@ -20,3 +20,5 @@ Feature: GMO Online Catalog
       | Padded Socks            | $ 19.99  |
       | Hiking Boots            | $ 109.90 |
       | Back Country Shorts     | $ 24.95  |
+
+

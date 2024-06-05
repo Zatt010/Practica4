@@ -28,5 +28,3 @@ Then(/^I should see the Product Total information bellow:$/) do |table|
     expect(additional_info.find('td:nth-child(3)').text).to eq(info_value)
   end
 end
-
-
