@@ -7,8 +7,17 @@ Feature: Resetting Order Quantity
     Given I am on the GMO homepage
     When I click on "Enter GMO Online"
 
-  @maximize
-  Scenario: Resetting Order Quantity to Zero
-    When I add 1 "3 Person Dome Tent" to the order
-    And I press "Reset Form"
-    Then the Order Quantity for "3 Person Dome Tent" should be 0
+@maximize
+Scenario Outline: Resetting Order Quantity to Zero
+  When I add 1 "<Product>" to the order
+  And I press "Reset Form"
+  Then the Order Quantity for "<Product>" should be 0
+
+  Examples:
+    | Product             |
+    | 3 Person Dome Tent  |
+    | External Frame Backpack |
+    | Glacier Sun Glasses |
+    | Padded Socks        |
+    | Hiking Boots        |
+    | Back Country Shorts |
