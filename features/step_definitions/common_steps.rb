@@ -1,5 +1,5 @@
 Given(/^I am on the GMO homepage$/) do
-    visit 'https://demo.borland.com/gmopost/'
+    visit '/'
   end
   
   When(/^I click on "Enter GMO Online"$/) do

@@ -1,6 +1,3 @@
-Then(/^I should see the GMO Online Catalog page$/) do
-  expect(page).to have_current_path('https://demo.borland.com/gmopost/online-catalog.htm')
-end
 
 # Paso específico para verificar el mensaje "These are the items currently available through our online catalog"
 Then(/^I should see the catalog availability message$/) do

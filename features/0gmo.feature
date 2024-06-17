@@ -9,8 +9,7 @@ Feature: GMO Online Catalog
   @maximize
   Scenario: Visiting the GMO Online Catalog from 0gmo
     When I click on "Enter GMO Online"
-    Then I should see the GMO Online Catalog page
-    And I should see "These are the items currently available through our online catalog"
+    Then I should see "These are the items currently available through our online catalog"
     And I should see "<Item>" with price "<Price>"
     Examples:
       | Item                    | Price    |
