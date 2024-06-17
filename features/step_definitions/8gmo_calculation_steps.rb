@@ -40,7 +40,7 @@ Then(/^I should see the following totals right down:$/) do |table|
   # Calcular los totales esperados en base a @order_details
   product_total = @order_details.sum { |item| item[:total_price] }
   sales_tax = (product_total * 0.05).round(2)  # Calcular el 5% del total del producto
-  grand_total = product_total + sales_tax + 5
+  grand_total = (product_total + sales_tax + 5).round(2) 
 
   # Debugging para verificar los cálculos
   puts "Product Total calculated: #{product_total}"
