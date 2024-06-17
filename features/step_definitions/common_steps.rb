@@ -7,6 +7,7 @@ Given(/^I am on the GMO homepage$/) do
   end
   
   When(/^I add (\d+) "([^"]*)" to the order$/) do |quantity, item_name|
+    
     product_name_css = "body > form > table > tbody > tr:nth-child(2) > td > div > center > table > tbody > tr > td:nth-child(2) > a > strong"
     product_names = all(product_name_css).map(&:text)
     index = product_names.index(item_name)
